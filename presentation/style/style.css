@@ -5,10 +5,13 @@ input{
     outline: none;
 }
 body {
-    transition: all .33s;
     margin: 0;
     background-image: url(../images/bg.png);
     background-size: cover;
+}
+#body {
+    transition: all .33s;
+
     display: flex;
     align-items: center;
     flex-direction: column;

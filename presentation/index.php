@@ -1,5 +1,5 @@
 <?php
-include '../data-access/database/promotion.php';
+include '../data-access/promotion.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +17,12 @@ include '../data-access/database/promotion.php';
 </head>
 
 <body>
-    <!-- logo -->
+    <form method="POST" action="../business/crud.php" id="body">
+            <!-- logo -->
     <h1 id="logo">iTask</h1>
     <!-- add and search section -->
 
-    <form id="craete" method="POST" action="../business/crud.php">
+    <div id="craete">
         <div id="add">
             <input type="text" name="addInput">
             <input type="submit" value="Add" name="add">
@@ -30,7 +31,7 @@ include '../data-access/database/promotion.php';
             <input type="text" name="search">
         </div>
         <img src="images/search.svg" id="searchIcon" onclick="switchBtn()">
-    </form>
+</div>
 
     <!-- list who get data from data base and display it -->
     <table>
@@ -41,6 +42,7 @@ include '../data-access/database/promotion.php';
                 <th id="controls">Controle</th>
             </tr>
         </thead>
+    <!-- select data from data base and list it in the table -->
         <tbody>
             <?php
             $select_data = new Promotion(null,null);
@@ -52,8 +54,8 @@ include '../data-access/database/promotion.php';
                     <td id="id-td">'.$row["id"].'</td>
                     <td width="800px" id="task-td">'.$row["name"].'</td>
                     <td id="control-btn">
-                        <input type="button" value="Edit" id="edit" name="editBtn">
-                        <input type="button" value="Delete" id="delete" name="dltBtn">
+                        <a ><input type="submit" value="Edit" id="edit" name="editBtn"></a>
+                        <a href="index.php?deleteId='.$row["id"].'" ><input type="submit" value="Delete" id="delete" name="dltBtn"></a>
                     </td>
                 </tr>';
                 }
@@ -70,6 +72,7 @@ include '../data-access/database/promotion.php';
             </tr> -->
         </tbody>
     </table>
+    </form>
     <!--  -->
     <script src="script/script.js"></script>
 </body>
