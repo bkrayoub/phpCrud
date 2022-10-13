@@ -7,8 +7,8 @@ class Promotion
     private $db = 'brief1';
     private $conn;
 
-    public $id;
-    public $nom;
+    private $id;
+    private $nom;
 
     function __construct($id, $name) {
         $this->id = $id;
