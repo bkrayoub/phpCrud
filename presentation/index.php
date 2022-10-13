@@ -38,7 +38,7 @@ include '../data-access/database/promotion.php';
             <tr>
                 <th width="50px" id="">ID</th>
                 <th width="800px">Name</th>
-                <th>Controle</th>
+                <th id="controls">Controle</th>
             </tr>
         </thead>
         <tbody>

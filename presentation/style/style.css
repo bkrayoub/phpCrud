@@ -118,6 +118,9 @@ th[width="800px"],td[width="800px"]{
     text-align: left;
     padding-left: 20px;
 }
+#controls {
+    text-align: center;
+}
 #control-btn {
     display: flex;
     align-items: center;

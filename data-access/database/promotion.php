@@ -25,4 +25,14 @@ class Promotion
         $insert_pro = "INSERT INTO promotion(name) VALUES ('$this->name')";
         $this->conn->query($insert_pro);
     }
+
+    function delete(){
+        $delete_pro = "DELETE FROM promotion WHERE id = $this->id";
+        $this->conn->query($delete_pro);
+    }
+
+    function update(){
+        $update_pro = "UPDATE promotion SET name = '$this->name' WHERE id = $this->id";
+        $this->conn->query($update_pro);
+    }
 }
