@@ -22,7 +22,7 @@ class Promotion
     }
 
     function insert(){
-        $insert_pro = 'INSERT INTO promotion(name) VALUES ("$this->name")';
+        $insert_pro = "INSERT INTO promotion(name) VALUES ('$this->name')";
         $this->conn->query($insert_pro);
     }
 }

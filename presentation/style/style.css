@@ -46,7 +46,7 @@ body {
     font-size: 23px;
     padding-left: 30px;
 }
-#add input[type="button"]{
+#add input[type="submit"]{
     height: 65px;
     border-radius: 30px;
     border: 0px;
@@ -59,7 +59,7 @@ body {
     transition: .33s;
 
 }
-#add input[type="button"]:hover {
+#add input[type="submit"]:hover {
     transition: .33s;
     background-color: #65068d;
 

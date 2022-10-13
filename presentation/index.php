@@ -1,5 +1,5 @@
 <?php
-include '../data-access/database/connection.php';
+include '../data-access/database/promotion.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,16 +20,18 @@ include '../data-access/database/connection.php';
     <!-- logo -->
     <h1 id="logo">iTask</h1>
     <!-- add and search section -->
-    <form id="craete" method="$_POST">
+
+    <form id="craete" method="POST" action="../business/crud.php">
         <div id="add">
             <input type="text" name="addInput">
-            <input type="button" value="Add" name="add">
+            <input type="submit" value="Add" name="add">
         </div>
         <div id="search">
             <input type="text" name="search">
         </div>
         <img src="images/search.svg" id="searchIcon" onclick="switchBtn()">
     </form>
+
     <!-- list who get data from data base and display it -->
     <table>
         <thead>
@@ -50,8 +52,8 @@ include '../data-access/database/connection.php';
                     <td id="id-td">'.$row["id"].'</td>
                     <td width="800px" id="task-td">'.$row["name"].'</td>
                     <td id="control-btn">
-                        <input type="button" value="Edit" id="edit">
-                        <input type="button" value="Delete" id="delete">
+                        <input type="button" value="Edit" id="edit" name="editBtn">
+                        <input type="button" value="Delete" id="delete" name="dltBtn">
                     </td>
                 </tr>';
                 }
