@@ -1,4 +1,5 @@
 <?php
+include '../business/getset.php';
 class Promotion
 {
     private $host = 'localhost';
@@ -8,7 +9,7 @@ class Promotion
     private $conn;
 
     private $id;
-    private $nom;
+    private $name;
 
     function __construct($id, $name) {
         $this->id = $id;

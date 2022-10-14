@@ -2,21 +2,21 @@
 
     class Services{
         private $id;
-        private $nom;
+        private $name;
 
-        function get_nom(){
-            return $this->nom;
+        function get_name(){
+            return $this->name;
         }
 
-        function set_nom($nom){
-            $this->nom = $nom;
+        function set_name($name){
+            $this->name = $name;
         }
 
-        function get_id(){
+        function getId(){
             return $this->id;
         }
 
-        function set_id($id){
+        function setId($id){
             $this->id = $id;
         }
         

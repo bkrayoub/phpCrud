@@ -7,12 +7,5 @@
         header('location: ../presentation/index.php');
     }
 
-    if(isset($_POST['dltBtn'])){
-        $obj = new promotion();
-        $prom = new Services();
-        $prom->set_id($_GET["delete_id"]);
-        $obj->delete($prom);
-        header("location: ../presentation/index.php");
-    }
 
 

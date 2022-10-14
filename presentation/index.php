@@ -55,7 +55,7 @@ include '../data-access/promotion.php';
                     <td width="800px" id="task-td">'.$row["name"].'</td>
                     <td id="control-btn">
                         <a ><input type="submit" value="Edit" id="edit" name="editBtn"></a>
-                        <a href="index.php?deleteId='.$row["id"].'" ><input type="submit" value="Delete" id="delete" name="dltBtn"></a>
+                        <a href="../business/delete.php?deleteId='.$row["id"].'" ><input type="button" value="Delete" id="delete"></a>
                     </td>
                 </tr>';
                 }
