@@ -27,8 +27,9 @@ class Promotion
         $this->conn->query($insert_pro);
     }
 
-    function delete(){
-        $delete_pro = "DELETE FROM promotion WHERE id = $this->id";
+    function delete($id){
+        $delete_pro = "DELETE FROM promotion WHERE id = $id";
+        echo $delete_pro;
         $this->conn->query($delete_pro);
     }
 
