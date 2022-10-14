@@ -5,7 +5,7 @@ require_once "../business/promotionBll.php";
     $promotionBal = new promotionBll();
 
 if(!empty($_POST)){
-	$promotion = new promotion();
+	$promotion = new promotion(null, null);
 	$promotion->setName($_POST['name']);
 	$promotionBal->addPromotion($promotion);
 	

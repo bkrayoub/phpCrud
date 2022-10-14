@@ -1,5 +1,5 @@
 
-var searchDisplay = false
+var searchDisplay = false;
 
 function switchBtn() {
 var add = document.getElementById('add');

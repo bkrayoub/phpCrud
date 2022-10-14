@@ -33,8 +33,8 @@ class Promotion
         $this->conn->query($delete_pro);
     }
 
-    function update(){
-        $update_pro = "UPDATE promotion SET name = '$this->name' WHERE id = $this->id";
+    function update($id){
+        $update_pro = "UPDATE promotion SET name = '$this->name' WHERE id = $id";
         $this->conn->query($update_pro);
     }
 }
