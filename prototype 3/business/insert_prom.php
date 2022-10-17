@@ -4,7 +4,7 @@
     if(isset($_POST["add_prom"])){
         $obj = new PromotionManager();
         $prom = new promotion();
-        $prom->set_nom($_POST["nom"]);
+        $prom->set_nom($_POST["name"]);
         $obj->insert($prom);
     }
     header("location: ../presentation/index.php");

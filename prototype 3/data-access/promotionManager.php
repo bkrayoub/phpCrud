@@ -5,13 +5,13 @@ class PromotionManager extends Conn
 {
     function insert($prom)
     {
-        $insert_pro = "INSERT INTO promotion(nom) VALUES('" . $prom->get_nom() . "')";
+        $insert_pro = "INSERT INTO promotion(name) VALUES('" . $prom->get_nom() . "')";
         $this->conn()->query($insert_pro);
     }
 
     function update($prom)
     {
-        $update_pro = "UPDATE promotion SET nom = '".$prom->get_nom()."' WHERE id = " . $prom->get_id();
+        $update_pro = "UPDATE promotion SET name = '".$prom->get_nom()."' WHERE id = " . $prom->get_id();
         $this->conn()->query($update_pro);
     }
 
@@ -23,7 +23,7 @@ class PromotionManager extends Conn
 
     function search($prom)
     {
-        $search_pro = "SELECT * FROM promotion WHERE nom LIKE '%".$prom->get_nom()."%'";
+        $search_pro = "SELECT * FROM promotion WHERE name LIKE '%".$prom->get_nom()."%'";
         $res = $this->conn()->query($search_pro);
         $rows = [];
         if ($res->num_rows > 0) {

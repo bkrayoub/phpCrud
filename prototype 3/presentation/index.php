@@ -27,7 +27,7 @@
                 for ($i = 0; $i < count($select); $i++) {
             ?>
                     <div class="data">
-                        <div><?php echo $select[$i]["nom"]; ?></div>
+                        <div><?php echo $select[$i]["name"]; ?></div>
                         <div class="edit_btn"><a href="edit_prom.php?edit_id=<?php echo $select[$i]["id"]; ?>">Edit</a></div>
                         <div class="delete_btn"><a href="../business/delete_prom.php?delete_id=<?php echo $select[$i]["id"]; ?>">Delete</a></div>
                     </div>

@@ -5,7 +5,7 @@
         $obj = new PromotionManager();
         $prom = new promotion();
         $prom->set_id($_POST["id"]);
-        $prom->set_nom($_POST["nom"]);
+        $prom->set_nom($_POST["name"]);
         $obj->update($prom);
     }
     header("location: ../presentation/index.php");

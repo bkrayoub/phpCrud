@@ -22,7 +22,7 @@
                     if ($select_res->num_rows > 0) {
                         while ($row = $select_res->fetch_assoc()) {
                     ?>
-                            <input type="text" name="nom" value="<?php echo $row["nom"]; ?>">
+                            <input type="text" name="nom" value="<?php echo $row["name"]; ?>">
                 </label>
                 <input type="hidden" name="id" value="<?php echo $row["id"] ?>">
                 <input type="submit" value="Submit" name="update_prom">
