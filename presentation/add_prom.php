@@ -11,7 +11,7 @@
 <body>
     <form action="../business/insert_prom.php" method="POST">
         <label for="">Name: <input type="text" name="nom"></label>
-        <input type="submit" name="add_prom" id="">
+        <input type="submit" name="add_prom" id="" value="Add">
         <p id="message"></p>
     </form>
     <script>
